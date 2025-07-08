@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Send, Plus, MessageSquare, Settings, PanelLeft, PanelLeftClose, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -18,25 +17,31 @@ const ChatInterface = () => {
   const [messages, setMessages] = useState<Array<{id: string, text: string, isUser: boolean}>>([]);
   
   const [sessions] = useState<ChatSession[]>([
-    { id: '1', title: 'Creative Writing Help', lastMessage: 'Can you help me write a story?', timestamp: '2 hours ago' },
-    { id: '2', title: 'React Development', lastMessage: 'How do I use useState?', timestamp: '1 day ago' },
-    { id: '3', title: 'Recipe Ideas', lastMessage: 'What can I make with chicken?', timestamp: '3 days ago' },
+    { id: '1', title: 'Organization Setup Help', lastMessage: 'Can you explain how our team structure works?', timestamp: '2 hours ago' },
+    { id: '2', title: 'User Story Generation', lastMessage: 'Help me create user stories from this screenshot', timestamp: '1 day ago' },
+    { id: '3', title: 'Domain Expert Search', lastMessage: 'Who has expertise in API design?', timestamp: '3 days ago' },
+    { id: '4', title: 'Workshop Template', lastMessage: 'I need a brainstorming session template', timestamp: '1 week ago' },
   ]);
 
   const promptSuggestions = [
     {
-      title: "Creative Writing",
-      description: "Help me write a compelling short story",
-      icon: "✨"
+      title: "New Employee Onboarding",
+      description: "Help me understand the organization structure and team setup",
+      icon: "👋"
     },
     {
-      title: "Learning Assistant", 
-      description: "Explain complex topics in simple terms",
-      icon: "🎓"
+      title: "User Story Generation", 
+      description: "Turn this screenshot into user stories based on our guidelines",
+      icon: "📋"
     },
     {
-      title: "Problem Solver",
-      description: "Help me brainstorm solutions to challenges",
+      title: "Find Domain Expert",
+      description: "Help me find someone with specific domain knowledge",
+      icon: "🔍"
+    },
+    {
+      title: "Workshop Template",
+      description: "Get a brainstorming session template for my team",
       icon: "💡"
     }
   ];
@@ -159,7 +164,7 @@ const ChatInterface = () => {
               </div>
 
               {/* Prompt Suggestions */}
-              <div className="grid md:grid-cols-3 gap-4 w-full max-w-4xl mb-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-6xl mb-8">
                 {promptSuggestions.map((prompt, index) => (
                   <div
                     key={index}
