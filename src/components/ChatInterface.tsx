@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Send, Plus, MessageSquare, Settings, Menu, X } from 'lucide-react';
+import { Send, Plus, MessageSquare, Settings, PanelLeft, PanelLeftClose, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -128,10 +128,10 @@ const ChatInterface = () => {
               onClick={() => setSidebarOpen(!sidebarOpen)}
               className="text-gray-600 hover:text-gray-800"
             >
-              <Menu className="h-5 w-5" />
+              {sidebarOpen ? <PanelLeftClose className="h-5 w-5" /> : <PanelLeft className="h-5 w-5" />}
             </Button>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Chat AI+
+              BRF Chat
             </h1>
           </div>
         </div>
