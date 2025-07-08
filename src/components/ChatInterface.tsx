@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Send, Plus, MessageSquare, Settings, PanelLeft, PanelLeftClose, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -17,10 +18,10 @@ const ChatInterface = () => {
   const [messages, setMessages] = useState<Array<{id: string, text: string, isUser: boolean}>>([]);
   
   const [sessions] = useState<ChatSession[]>([
-    { id: '1', title: 'Organization Setup Help', lastMessage: 'Can you explain how our team structure works?', timestamp: '2 hours ago' },
-    { id: '2', title: 'User Story Generation', lastMessage: 'Help me create user stories from this screenshot', timestamp: '1 day ago' },
-    { id: '3', title: 'Domain Expert Search', lastMessage: 'Who has expertise in API design?', timestamp: '3 days ago' },
-    { id: '4', title: 'Workshop Template', lastMessage: 'I need a brainstorming session template', timestamp: '1 week ago' },
+    { id: '1', title: 'Team Roles & Responsibilities', lastMessage: 'What are the key responsibilities of a Technical Lead?', timestamp: '2 hours ago' },
+    { id: '2', title: 'Epic Breakdown Session', lastMessage: 'Break down this checkout flow into manageable user stories', timestamp: '1 day ago' },
+    { id: '3', title: 'Finding React Expert', lastMessage: 'Who in our team has advanced React and TypeScript skills?', timestamp: '3 days ago' },
+    { id: '4', title: 'Design Thinking Workshop', lastMessage: 'Set up a problem definition workshop for our mobile app', timestamp: '1 week ago' },
   ]);
 
   const promptSuggestions = [
